@@ -4,16 +4,16 @@ import bitmojiPull from '../../../assets/Curtainpull.png'; // Bitmoji pulling th
 import './Countdown.css';
 
 const BUBBLE_DATA = [
-  { id: 1, animClass: "stream-1", delay: "0s", left: "6%", text: "You bring so much joy into everyone's life! ✨", photo: "https://picsum.photos/id/1025/120/120" },
-  { id: 2, animClass: "stream-2", delay: "2.5s", left: "16%", text: "Always glowing and spreading happiness! 💖", photo: "https://picsum.photos/id/1062/120/120" },
-  { id: 3, animClass: "stream-3", delay: "1.2s", left: "26%", text: "Your smile brightens up the whole room 🌸", photo: "https://picsum.photos/id/1074/120/120" },
-  { id: 4, animClass: "stream-4", delay: "3.8s", left: "36%", text: "Never stop being your wonderful self! 🎉", photo: "https://picsum.photos/id/1084/120/120" },
-  { id: 5, animClass: "stream-1", delay: "0.8s", left: "46%", text: "An absolute light in this world! ⭐", photo: "https://picsum.photos/id/1069/120/120" },
-  { id: 6, animClass: "stream-2", delay: "2.0s", left: "56%", text: "Kindness looks so good on you! 💕", photo: "https://picsum.photos/id/1027/120/120" },
-  { id: 7, animClass: "stream-3", delay: "4.2s", left: "66%", text: "The life of every single party! 🥳", photo: "https://picsum.photos/id/1039/120/120" },
-  { id: 8, animClass: "stream-4", delay: "1.7s", left: "76%", text: "Your positivity is super infectious! 🌈", photo: "https://picsum.photos/id/1050/120/120" },
-  { id: 9, animClass: "stream-1", delay: "3.1s", left: "84%", text: "So lucky to celebrate you today! 🎁", photo: "https://picsum.photos/id/1060/120/120" },
-  { id: 10, animClass: "stream-2", delay: "0.4s", left: "92%", text: "Best human award goes to you! 🏆", photo: "https://picsum.photos/id/1080/120/120" },
+  { id: 1, animClass: "stream-1", delay: "0s", left: "6%", text: "You bring so much joy into everyone's life! ✨", photo: "/photo1.jpg" },
+  { id: 2, animClass: "stream-2", delay: "2.5s", left: "16%", text: "Always glowing and spreading happiness! 💖", photo: "/photo2.jpg" },
+  { id: 3, animClass: "stream-3", delay: "1.2s", left: "26%", text: "Your smile brightens up the whole room 🌸", photo: "/photo3.jpg" },
+  { id: 4, animClass: "stream-4", delay: "3.8s", left: "36%", text: "Never stop being your wonderful self! 🎉", photo: "/photo4.jpg" },
+  { id: 5, animClass: "stream-1", delay: "0.8s", left: "46%", text: "An absolute light in this world! ⭐", photo: "/photo5.jpg" },
+  { id: 6, animClass: "stream-2", delay: "2.0s", left: "56%", text: "Love you soo muchhh💕", photo: "/photo6.jpg" },
+  { id: 7, animClass: "stream-3", delay: "4.2s", left: "66%", text: "Enjoy ur dayyy🥳", photo: "/photo7.jpg" },
+  { id: 8, animClass: "stream-4", delay: "1.7s", left: "76%", text: "Your positivity is super infectious! 🌈", photo: "/photo8.jpg" },
+  { id: 9, animClass: "stream-1", delay: "3.1s", left: "84%", text: "So lucky to celebrate you today! 🎁", photo: "/photo9.jpg" },
+  { id: 10, animClass: "stream-2", delay: "0.4s", left: "92%", text: "Keep growing!!", photo: "/photo10.jpg" },
 ];
 
 export default function CountdownScene({ onComplete }) {
