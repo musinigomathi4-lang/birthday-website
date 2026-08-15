@@ -1,6 +1,5 @@
 import React from 'react';
 import LetterModal from './LetterModal';
-import './keepsakes.css';
 
 export default function KeepsakesScene({ polaroidImg, activeKeepsake, onClose }) {
   return (
