@@ -1,0 +1,128 @@
+/* Modal Overlay Backdrop */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 3, 16, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal Card Box */
+.letter-card-container,
+.polaroid-modal-container {
+  position: relative;
+  width: 90%;
+  max-width: 580px;
+  max-height: 85vh;
+  background: #ffffff !important;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 190, 11, 0.4);
+  padding: 35px 30px;
+  overflow-y: auto;
+  animation: popUp 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid rgba(255, 190, 11, 0.5);
+  z-index: 1000;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #ff4081;
+  color: #ffffff;
+}
+
+/* Typography & Content */
+.letter-header h2,
+.modal-title {
+  color: #4a205a;
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.letter-body {
+  color: #1c0a29;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.letter-body p {
+  margin-bottom: 16px;
+}
+
+.letter-highlight {
+  font-weight: 700;
+  color: #d81b60;
+  background: rgba(255, 190, 11, 0.2);
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.letter-signature {
+  margin-top: 25px;
+  font-weight: 700;
+  color: #ff4081;
+}
+
+.ps-note {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Polaroid Container Fixes */
+.polaroid-img-preview {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.no-img-text {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  padding: 40px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popUp {
+  from { opacity: 0; transform: scale(0.8) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}

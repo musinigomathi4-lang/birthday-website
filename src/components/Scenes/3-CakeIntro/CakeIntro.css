@@ -1,0 +1,185 @@
+/* Full Viewport Container */
+.cake-intro-scene-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background: linear-gradient(135deg, #fff0f3 0%, #ffccd5 100%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 5vw;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* TOP HEADER BANNER (High-Contrast White Badge) */
+.banner-container {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.happy-birthday-banner {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 32px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 0 15px rgba(255, 182, 193, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.happy-birthday-banner h1 {
+  color: #4a154b;
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* LEFT SIDE: Cake (Right-side up!) */
+.cake-left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plain-cake-base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plain-layer {
+  background: #f7d6b5;
+  border-radius: 12px;
+  border: 3px solid #e0b083;
+}
+
+.layer-top {
+  width: clamp(140px, 18vw, 200px);
+  height: clamp(55px, 8vw, 80px);
+}
+
+.layer-bottom {
+  width: clamp(180px, 24vw, 260px);
+  height: clamp(65px, 9vw, 95px);
+  margin-top: -6px;
+}
+
+.cake-stand {
+  width: clamp(210px, 28vw, 300px);
+  height: 14px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: -2px; /* Sits underneath bottom layer */
+}
+
+/* RIGHT SIDE: Bitmoji Host & Buttons Container */
+.host-right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: clamp(280px, 35vw, 420px);
+}
+
+.speech-bubble-intro {
+  background: #ffffff;
+  color: #2b2d42;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+  padding: 12px 20px;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(255, 77, 109, 0.2);
+  margin-bottom: 12px;
+  text-align: center;
+  position: relative;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.speech-bubble-intro::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0;
+  border-style: solid;
+  border-color: #ffffff transparent;
+}
+
+.bitmoji-intro-img {
+  height: clamp(180px, 25vw, 270px);
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.bitmoji-intro-img.dramatic-bounce {
+  animation: dramaticShake 0.5s ease-in-out;
+}
+
+@keyframes dramaticShake {
+  0%, 100% { transform: translateY(0) scale(1); }
+  25% { transform: translateY(-12px) scale(1.05); }
+  50% { transform: translateY(0) scale(0.98); }
+  75% { transform: translateY(-6px) scale(1.02); }
+}
+
+/* Action Button Group (Directly under Bitmoji) */
+.action-button-group {
+  display: flex;
+  gap: 16px;
+  z-index: 30;
+}
+
+.intro-btn {
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.yes-btn {
+  background: linear-gradient(90deg, #ff758f, #ff4d6d);
+  color: #ffffff;
+}
+
+.yes-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(255, 77, 109, 0.4);
+}
+
+.no-btn {
+  background: #ffffff;
+  color: #ff4d6d;
+  border: 2px solid #ffb3c1;
+}
+
+.no-btn:hover {
+  transform: scale(1.05);
+  background: #fff0f3;
+}
+
+.morph-btn {
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

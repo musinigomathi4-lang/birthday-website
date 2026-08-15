@@ -1,0 +1,210 @@
+.cinematic-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.camera-flash-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #ffffff;
+  z-index: 100;
+  animation: flashAnim 0.3s ease-out forwards;
+}
+
+@keyframes flashAnim {
+  0% { opacity: 0.95; }
+  100% { opacity: 0; }
+}
+
+.smoke-puff {
+  font-size: 1.5rem;
+  animation: floatSmoke 1s ease-out forwards;
+}
+
+@keyframes floatSmoke {
+  0% { opacity: 0.9; transform: translateY(0) scale(0.8); }
+  100% { opacity: 0; transform: translateY(-30px) scale(1.4); }
+}
+
+.party-banner-text.animate-drop {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ffbe0b;
+  text-shadow: 0 0 12px rgba(0,0,0,0.6);
+  letter-spacing: 2px;
+  z-index: 15;
+  animation: dropBanner 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes dropBanner {
+  0% { transform: translateY(-80px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.party-bg-layer {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 1;
+}
+
+.cinematic-wrapper.colorful-party-mode .party-bg-layer {
+  opacity: 1;
+}
+
+.cinematic-wrapper.dark-mode .cake-reveal-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.cinematic-wrapper.colorful-party-mode .cake-reveal-container {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.cinematic-header {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.main-title {
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+
+.stage-area {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.cake-reveal-container {
+  transform: scale(0.75);
+  transform-origin: bottom center;
+}
+
+.flames-container {
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.candle-flames-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.flame-item {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flame-glow-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fire-emoji {
+  font-size: 1.8rem;
+  animation: flameFlicker 0.4s infinite alternate ease-in-out;
+  filter: drop-shadow(0 0 12px #ffbe0b) drop-shadow(0 0 20px #ff4500);
+}
+
+.halo-glow {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: radial-gradient(circle, rgba(255, 220, 100, 0.9) 0%, rgba(255, 100, 0, 0) 75%);
+  border-radius: 50%;
+  animation: pulseGlow 0.8s infinite alternate;
+}
+
+@keyframes flameFlicker {
+  0% { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.1) translateY(-2px); }
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.3); opacity: 1; }
+}
+
+.bitmoji-host-anchor {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.bitmoji-host-anchor.walk-off {
+  animation: walkOffRight 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes walkOffRight {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-350px); opacity: 0; }
+}
+
+.host-speech-bubble {
+  background: white;
+  padding: 10px 16px;
+  border-radius: 18px;
+  border-bottom-left-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 220px;
+}
+
+.host-speech-bubble p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Update in Candlelight.css and Gift.css */
+.host-bitmoji-img {
+  width: 130px; /* Bumps size up from 90px */
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.bitmoji-host-anchor {
+  bottom: 25px;
+  left: 25px;
+  gap: 16px;
+}
